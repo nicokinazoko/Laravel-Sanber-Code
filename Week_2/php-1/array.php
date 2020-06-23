@@ -108,7 +108,30 @@
 
             ];
 
-            echo $multi_array['User_1']["Name"];
+            echo "<h3>Soal 3</h3>";
+            echo $multi_array['User_1']["Name"] . "<br>";
+            echo $multi_array['User_1']["Age"]  . "<br>";
+            echo $multi_array['User_1']["Aliases"] . "<br>";
+            echo $multi_array['User_1']["Status"] . "<br>";
+
+            echo "<br><br>";
+            echo $multi_array['User_2']["Name"] . "<br>";
+            echo $multi_array['User_2']["Age"]  . "<br>";
+            echo $multi_array['User_2']["Aliases"] . "<br>";
+            echo $multi_array['User_2']["Status"] . "<br>";
+
+            echo "<br><br>";
+            echo $multi_array['User_3']["Name"] . "<br>";
+            echo $multi_array['User_3']["Age"]  . "<br>";
+            echo $multi_array['User_3']["Aliases"] . "<br>";
+            echo $multi_array['User_3']["Status"] . "<br>";
+
+            echo "<br><br>";
+            echo $multi_array['User_4']["Name"] . "<br>";
+            echo $multi_array['User_4']["Age"]  . "<br>";
+            echo $multi_array['User_4']["Aliases"] . "<br>";
+            echo $multi_array['User_4']["Status"] . "<br>";
+            
     ?>
 </body>
 </html>
