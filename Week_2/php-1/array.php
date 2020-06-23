@@ -131,7 +131,8 @@
             echo $multi_array['User_4']["Age"]  . "<br>";
             echo $multi_array['User_4']["Aliases"] . "<br>";
             echo $multi_array['User_4']["Status"] . "<br>";
-            
+       
+            print_r($multi_array);
     ?>
 </body>
 </html>
