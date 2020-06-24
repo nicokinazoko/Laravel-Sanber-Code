@@ -16,8 +16,7 @@ function pasangan_terbesar($angka)
             $max_new            =   $temp;
         }
     }
-
-    
+ 
     return $max_new . "<br>";
 
 }

@@ -9,9 +9,16 @@ function tentukan_deret_aritmatika($arr)
         {
             break;
         }
+
         else
+
+        if(array_key_exists($i+2, $arr) == false)
         {
-            if($arr[$i+1] - $arr[$i] == 2)
+            break;
+        }
+
+        {
+            if($arr[$i+1] - $arr[$i] == $arr[$i+2] - $arr[$i+1])
             {
                 $hasil  =   "true";
             }
@@ -21,11 +28,11 @@ function tentukan_deret_aritmatika($arr)
                 $hasil  =   "false";
             break;
             }
-        }
-        
+        }   
     }
 
     return $hasil . "<br>";
+
 }
 
 // TEST CASES

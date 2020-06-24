@@ -8,8 +8,6 @@ function cari_mean($arr)
     $mean                   =   round($sum_total / $length_total) . "<br>";
 
     return $mean;
-
-    
 }
 
 //TEST CASE 

@@ -30,6 +30,7 @@ function papan_catur($angka)
 }
 
 
+
 // TEST CASES
 echo papan_catur(4);
 /*

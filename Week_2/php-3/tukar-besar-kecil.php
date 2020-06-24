@@ -29,7 +29,6 @@ function tukar_besar_kecil($string)
 
     echo "<br>";
 
-
 }
 
 // TEST CASES

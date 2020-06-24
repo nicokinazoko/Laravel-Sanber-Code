@@ -28,7 +28,6 @@ function tentukan_deret_geometri($arr)
 
     return $hasil . "<br>";
     
-    
 }
 //TEST CASES
 echo tentukan_deret_geometri([1, 3, 9, 27, 81]); // true
