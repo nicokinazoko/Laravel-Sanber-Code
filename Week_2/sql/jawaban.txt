@@ -1,0 +1,71 @@
+1. Soal 1 Membuat Database
+CREATE DATABASE myshop;
+
+2. Soal 2 Membuat Table di Dalam Database
+-> Tabel users 
+CREATE TABLE users(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255),
+email VARCHAR(255),
+pasword VARCHAR(255)
+);
+
+-> Tabel categories
+CREATE TABLE categories
+(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255)
+);
+
+-> Tabel items
+CREATE TABLE items
+(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255),
+description VARCHAR(255),
+price INT,
+stock INT,
+category_id INT,
+FOREIGN KEY(category_id) REFERENCES categories(id)
+);
+
+3. Soal 3 Memasukkan Data pada Table
+
+-> INSERT INTO users(name,email,pasword) VALUES
+('John Doe','john@doe.com','john123'),
+('Jane Doe','jane@doe.com','jenita123');
+
+-> INSERT INTO categories(name) VALUES
+('gadget'),
+('cloth'),
+('men'),
+('women'),
+('branded');
+
+-> INSERT INTO items(name,description,price,stock,category_id) VALUES
+('Sumsang b50','hape keren dari merek sumsang',4000000,100,'1'),
+('Uniklooh','baju keren dari brand ternama',500000,50,'2'),
+('IMHO Watch','jam tangan anak yang jujur banget',2000000,10,'1');
+
+4. Soal 4 Mengambil Data dari Database
+
+a. Mengambil data users
+Buatlah sebuah query untuk mendapatkan data seluruh user pada table users. Sajikan semua field pada table users KECUALI password nya.
+-> SELECT id,name,email FROM users;
+
+b. Buatlah sebuah query untuk mendapatkan data item pada table items yang memiliki harga di atas 1000000 (satu juta).
+-> SELECT * FROM items WHERE price > 1000000;
+Buat sebuah query untuk mengambil data item pada table items yang memiliki name serupa atau mirip (like) dengan kata kunci “uniklo”, “watch”, atau “sang” (pilih salah satu saja).
+-> SELECT * FROM items WHERE name like '%uniklo%';
+
+c. Menampilkan data items join dengan kategori
+Buatlah sebuah query untuk menampilkan data items yang dilengkapi dengan data nama kategori di masing-masing items. Berikut contoh tampilan data yang ingin didapatkan
+-> SELECT items.name AS "name", 
+items.description AS "description",
+items.price AS "price",
+items.stock AS "stock",
+items.category_id AS "category_id",
+categories.name AS "kategori"
+FROM items
+INNER JOIN categories
+ON items.category_id = categories.id;
