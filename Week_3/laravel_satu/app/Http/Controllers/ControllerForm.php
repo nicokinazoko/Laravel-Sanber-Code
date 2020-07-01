@@ -33,4 +33,5 @@ class ControllerForm extends Controller
         ]);
         #return view('view_form/index',["nama" => "Nico"]);
     }
+    
 }
